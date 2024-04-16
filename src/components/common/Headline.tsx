@@ -17,7 +17,7 @@ function Headline({ text }: { text: string }) {
                     duration: 2,
                 },
             }}
-            viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+            viewport={{ once: true, margin: "0px 0px -35% 0px" }}
         >
             &#60; {text} /&#62;
         </motion.h1>
