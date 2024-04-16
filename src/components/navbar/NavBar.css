@@ -1,0 +1,82 @@
+.navBar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px black solid;
+
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 12px -1px #000000;
+
+    z-index: 1000;
+}
+
+.navHeadline {
+    width: 40%;
+    font-size: 22px;
+    color: white;
+}
+
+.navLinks {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+}
+
+.navLinks a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.link.active {
+    color: white;
+}
+
+/* Theme Switch */ 
+.themeSwitch {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+.themeSwitch:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.themeIndicator{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.themeSwitch.dark .themeIndicator{
+    right: 0;
+    left: auto;
+}
+
+.themeIcon {
+    font-size: 25px;
+    color: black;
+}
+
+.themeIcon.active {
+    color: white;
+}
