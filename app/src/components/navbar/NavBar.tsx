@@ -69,7 +69,6 @@ function NavBar() {
                     <a className={aboutMeVisible ? "link active" : "link"} onClick={() => scrollTo("aboutMe")}>About Me</a>
                     <a className={projectsVisible ? "link active" : "link"} onClick={() => scrollTo("projects")}>Projects</a>
                     <a className={skillsVisible ? "link active" : "link"} onClick={() => scrollTo("mySkills")}>Skills</a>
-                    <a>Contact</a>
                 </div>
                 <ThemeButton />
             </div>
@@ -85,7 +84,6 @@ function NavBar() {
             <a className={aboutMeVisible ? "link active" : "link"} onClick={() => scrollTo("aboutMe")}>About Me</a>
             <a className={projectsVisible ? "link active" : "link"} onClick={() => scrollTo("projects")}>Projects</a>
             <a className={skillsVisible ? "link active" : "link"} onClick={() => scrollTo("mySkills")}>Skills</a>
-            <a>Contact</a>
         </div>
         <div className="burgerTheme">
             <ThemeButton />

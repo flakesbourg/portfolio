@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    padding-top: 20px;
+    margin-top: 100px;
+}
+
+.footer h2{
+    text-decoration: underline;
+}
+
+.socialContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.socialContainer a {
+    margin-left: 30px;
+    font-weight: bolder;
+}

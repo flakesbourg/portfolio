@@ -7,6 +7,7 @@ import NavBar from './components/navbar/NavBar';
 import Projects from './components/projects/Projects';
 import AboutMe from './components/aboutme/AboutMe';
 import MySkills from './components/skills/MySkills';
+import Footer from './components/footer/Footer';
 
 type ThemeState = {
   theme: Theme;
@@ -28,7 +29,7 @@ class App extends React.Component<{}, ThemeState> {
           <AboutMe />
           <Projects />
           <MySkills />
-          <div style={{height: "100vh"}} />
+          <Footer />
         </div>
       </ThemeContext.Provider>
     );
