@@ -6,6 +6,7 @@ import Theme from './themes/Theme';
 import NavBar from './components/navbar/NavBar';
 import Projects from './components/projects/Projects';
 import AboutMe from './components/aboutme/AboutMe';
+import MySkills from './components/skills/MySkills';
 
 type ThemeState = {
   theme: Theme;
@@ -26,6 +27,7 @@ class App extends React.Component<{}, ThemeState> {
           <NavBar />
           <AboutMe />
           <Projects />
+          <MySkills />
           <div style={{height: "100vh"}} />
         </div>
       </ThemeContext.Provider>

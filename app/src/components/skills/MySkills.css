@@ -1,0 +1,50 @@
+#mySkills{
+    margin: 0 10%;
+}
+
+.skillContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+.skillText{
+    font-size: 20px;
+}
+
+.skillImage{
+    height: 50px;
+}
+
+.star{
+    color: gray;
+}
+
+.star.active{
+    color: yellow;
+}
+
+@media (min-width: 700px) {
+    .skillImage{
+        height: 70px;
+    }
+
+    .skillText{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1500px) {
+    #mySkills{
+        margin: 0 20%;
+    }
+}
+
+@media (min-width: 2000px) {
+    #mySkills{
+        margin: 0 30%;
+    }
+}

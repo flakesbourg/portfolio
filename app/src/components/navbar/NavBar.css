@@ -115,6 +115,7 @@
     position: relative;
     z-index: 1;
     background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7)
 }
 
 .themeSwitch:hover{
@@ -156,5 +157,35 @@
     .burgerIcon,
     .burgerContainer{
         display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .linksContainer{
+        column-gap: 70px;
+    }
+
+    .navLinks{
+    grid-column-gap: 40px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .linksContainer{
+        column-gap: 100px;
+    }
+
+    .navLinks{
+    grid-column-gap: 60px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .linksContainer{
+        column-gap: 130px;
+    }
+
+    .navLinks{
+    grid-column-gap: 80px;
     }
 }

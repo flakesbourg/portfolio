@@ -9,12 +9,14 @@ function NavBar() {
     const { theme } = useContext(ThemeContext);
     const [projectsVisible, setProjectsVisible] = useState(false);
     const [aboutMeVisible, setAboutMeVisible] = useState(false);
+    const [skillsVisible, setSkillsVisible] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const aboutMe = document.getElementById("aboutMe");
             const projects = document.getElementById("projects");
+            const mySkills = document.getElementById("mySkills");
 
             if (aboutMe) {
                 const rect = aboutMe.getBoundingClientRect();
@@ -26,6 +28,13 @@ function NavBar() {
             if (projects) {
                 const rect = projects.getBoundingClientRect();
                 setProjectsVisible(
+                    rect.top < window.innerHeight - window.outerHeight + 250 && rect.bottom >= 100
+                );
+            }
+
+            if (mySkills) {
+                const rect = mySkills.getBoundingClientRect();
+                setSkillsVisible(
                     rect.top < window.innerHeight - window.outerHeight + 250 && rect.bottom >= 100
                 );
             }
@@ -59,7 +68,7 @@ function NavBar() {
                 <div className="navLinks">
                     <a className={aboutMeVisible ? "link active" : "link"} onClick={() => scrollTo("aboutMe")}>About Me</a>
                     <a className={projectsVisible ? "link active" : "link"} onClick={() => scrollTo("projects")}>Projects</a>
-                    <a>Skills</a>
+                    <a className={skillsVisible ? "link active" : "link"} onClick={() => scrollTo("mySkills")}>Skills</a>
                     <a>Contact</a>
                 </div>
                 <ThemeButton />
@@ -75,7 +84,7 @@ function NavBar() {
             </div>
             <a className={aboutMeVisible ? "link active" : "link"} onClick={() => scrollTo("aboutMe")}>About Me</a>
             <a className={projectsVisible ? "link active" : "link"} onClick={() => scrollTo("projects")}>Projects</a>
-            <a>Skills</a>
+            <a className={skillsVisible ? "link active" : "link"} onClick={() => scrollTo("mySkills")}>Skills</a>
             <a>Contact</a>
         </div>
         <div className="burgerTheme">
