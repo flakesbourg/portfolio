@@ -17,11 +17,11 @@ function Skill (props: Props) {
         let emptyStars = 3 - props.skillLevel;
 
         for(let i = 0; i < props.skillLevel; i++) {
-            content.push(<BsStarFill size={25} className="star active" />)
+            content.push(<BsStarFill key={props.description + i} size={27} className="star active" />)
         }
 
         for(let i = 0; i < emptyStars; i++) {
-            content.push(<BsStarFill size={25} className="star" />)
+            content.push(<BsStarFill key={props.description + "active" + i} size={27} className="star" />)
         }
 
         return content;
@@ -44,7 +44,9 @@ function Skill (props: Props) {
         }}
         viewport={{ once: true, margin: "0px 0px -30% 0px" }}
         className="skillContainer" style={{backgroundColor: theme.backgroundColorSecondary}}>
-            <img className="skillImage" src={props.imageUrl} />
+            <div className="imageContainer">
+                <img className="skillImage" src={props.imageUrl} />
+            </div>
             <h2 className="skillText">
                 {props.description}
             </h2>
